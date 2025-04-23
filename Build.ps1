@@ -53,10 +53,3 @@ if (-not (Get-Command New-MarkdownHelp -ErrorAction SilentlyContinue)) {
 Write-Host "Importing module into current session..." -ForegroundColor Yellow
 Import-Module $manifestPath -Force
 Write-Host "Build completed." -ForegroundColor Cyan
-
-# Version bump (optional, here patch)
-$manifest = Import-PowerShellDataFile -Path $manifestPath
-$version = [System.Version]$manifest.ModuleVersion
-$newVersion = "{0}.{1}.{2}" -f $version.Major, $version.Minor, ($version.Build + 1)
-Update-ModuleManifest -Path $manifestPath -ModuleVersion $newVersion
-Write-Host "Bumped module version to $newVersion" -ForegroundColor Green
