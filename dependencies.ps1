@@ -28,4 +28,10 @@
             Force        = $true
         }
     }
+
+    Sysmon = @{
+    DependencyType = 'Command'
+    Command        = 'winget install --id Sysinternals.Sysmon -e --accept-source-agreements --accept-package-agreements'
+    SkipIf         = { Test-Path "$env:ProgramFiles\\Sysinternals Suite\\Sysmon.exe" }
+    }
 }
