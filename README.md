@@ -21,7 +21,7 @@ A professional PowerShell module for analyzing and exporting Windows Event Logs 
 Invoke-PSDepend .\dependencies.psd1 -Force
 
 # 2. Import the module
-Import-Module .\XBCore.Win32LogTools\XBCore.Win32LogTools.psd1 -Force
+Import-Module .\XB-Win32LogTools\XB-Win32LogTools.psd1 -Force
 ```
 
 ## 🔧 Build/Test
